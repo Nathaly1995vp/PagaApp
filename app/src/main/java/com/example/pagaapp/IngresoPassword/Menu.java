@@ -13,9 +13,9 @@ import com.example.pagaapp.HistorialDePagos.HistorialPagos;
 import com.example.pagaapp.PagaCreditosBancarios.PagaCreditosBancarios;
 import com.example.pagaapp.PagaTarjetaCredito.PagaTarjetaCredito;
 import com.example.pagaapp.PuntajeCrediticio.PuntajeCrediticio;
-import com.example.pagaapp.PuntajeCrediticio.TipsCrediticios;
 import com.example.pagaapp.QrEstablecimientos.EscaneaQrPago;
 import com.example.pagaapp.R;
+import com.example.pagaapp.RecargaBancosPse.RecargaPSE;
 import com.example.pagaapp.RecargaBancosPse.RecargarCuenta;
 
 public class Menu extends AppCompatActivity {
@@ -47,10 +47,10 @@ Button volverMenu;
         });
         getSupportActionBar().hide();
 
-        creditoBancario = (ImageButton)findViewById(R.id.creditoBancario);
+        creditoBancario = (ImageButton)findViewById(R.id.crediBanc);
         creditoBancario.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(Menu.this, PagaCreditosBancarios.class);
+                Intent intent = new Intent(Menu.this, PagaTarjetaCredito.class);
                 startActivity(intent);
                 finish();
             }
@@ -100,7 +100,7 @@ Button volverMenu;
         retirar = (ImageButton)findViewById(R.id.retirar);
         retirar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(Menu.this, TipsCrediticios.class);
+                Intent intent = new Intent(Menu.this, RecargaPSE.class);
                 startActivity(intent);
                 finish();
             }

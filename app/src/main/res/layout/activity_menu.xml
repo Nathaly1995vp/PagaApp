@@ -45,7 +45,7 @@
         app:srcCompat="@drawable/recargarmenu" />
 
     <ImageButton
-        android:id="@+id/creditoBancario"
+        android:id="@+id/crediBanc"
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
