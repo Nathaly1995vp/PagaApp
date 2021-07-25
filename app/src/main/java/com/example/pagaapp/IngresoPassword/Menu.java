@@ -6,25 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.pagaapp.BolsilloDinero.BolsilloAhorrador;
 import com.example.pagaapp.HistorialDePagos.HistorialPagos;
 import com.example.pagaapp.PagaCreditosBancarios.PagaCreditosBancarios;
 import com.example.pagaapp.PagaTarjetaCredito.PagaTarjetaCredito;
 import com.example.pagaapp.PuntajeCrediticio.PuntajeCrediticio;
+import com.example.pagaapp.PuntajeCrediticio.TipsCrediticios;
 import com.example.pagaapp.QrEstablecimientos.EscaneaQrPago;
 import com.example.pagaapp.R;
 import com.example.pagaapp.RecargaBancosPse.RecargarCuenta;
 
 public class Menu extends AppCompatActivity {
-Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsillo, qrEstablecimientos, historialPagos;
+ImageButton tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsillo, qrEstablecimientos, historialPagos, retirar;
+Button volverMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        historialPagos = (Button)findViewById(R.id.historialPagos);
+        historialPagos = (ImageButton)findViewById(R.id.historialPagos);
         historialPagos.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, HistorialPagos.class);
@@ -34,7 +37,7 @@ Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsi
         });
         getSupportActionBar().hide();
 
-        tarjetaCredito = (Button)findViewById(R.id.tarjetaCredito);
+        tarjetaCredito = (ImageButton)findViewById(R.id.tarjetaCredito);
         tarjetaCredito.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, PagaTarjetaCredito.class);
@@ -44,7 +47,7 @@ Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsi
         });
         getSupportActionBar().hide();
 
-        creditoBancario = (Button)findViewById(R.id.creditoBancario);
+        creditoBancario = (ImageButton)findViewById(R.id.creditoBancario);
         creditoBancario.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, PagaCreditosBancarios.class);
@@ -54,7 +57,7 @@ Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsi
         });
         getSupportActionBar().hide();
 
-        puntajeCrediticio = (Button)findViewById(R.id.puntajeCrediticio);
+        puntajeCrediticio = (ImageButton)findViewById(R.id.puntajeCrediticio);
         puntajeCrediticio.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, PuntajeCrediticio.class);
@@ -64,7 +67,7 @@ Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsi
         });
         getSupportActionBar().hide();
 
-        recargarCuenta = (Button)findViewById(R.id.recargarCuenta);
+        recargarCuenta = (ImageButton)findViewById(R.id.recargarCuenta);
         recargarCuenta.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, RecargarCuenta.class);
@@ -74,7 +77,7 @@ Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsi
         });
         getSupportActionBar().hide();
 
-        bolsillo = (Button)findViewById(R.id.bolsillo);
+        bolsillo = (ImageButton)findViewById(R.id.bolsillo);
         bolsillo.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, BolsilloAhorrador.class);
@@ -84,10 +87,30 @@ Button tarjetaCredito, creditoBancario, puntajeCrediticio, recargarCuenta, bolsi
         });
         getSupportActionBar().hide();
 
-        qrEstablecimientos = (Button)findViewById(R.id.qrEstablecimientos);
+        qrEstablecimientos = (ImageButton)findViewById(R.id.qrEstablecimientos);
         qrEstablecimientos.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Menu.this, EscaneaQrPago.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        getSupportActionBar().hide();
+
+        retirar = (ImageButton)findViewById(R.id.retirar);
+        retirar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(Menu.this, TipsCrediticios.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        getSupportActionBar().hide();
+
+        volverMenu = (Button)findViewById(R.id.volverMenu);
+        volverMenu.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(Menu.this, Ingresar.class);
                 startActivity(intent);
                 finish();
             }

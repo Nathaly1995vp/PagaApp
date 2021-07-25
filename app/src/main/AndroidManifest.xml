@@ -9,11 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PagaApp">
-        <activity android:name=".PagaCreditosBancarios.CreditosPersonales"></activity>
-        <activity android:name=".PagaCreditosBancarios.PagoFallidoCB" />
         <activity android:name=".PagaCreditosBancarios.PagoExitosoCB" />
         <activity android:name=".PagaCreditosBancarios.PagaCreditosBancarios" />
-        <activity android:name=".PagaTarjetaCredito.PagoFallidoTC" />
         <activity android:name=".PagaTarjetaCredito.PagoExitosoTC" />
         <activity android:name=".PuntajeCrediticio.TipsCrediticios" />
         <activity android:name=".PuntajeCrediticio.PuntajeCrediticio" />

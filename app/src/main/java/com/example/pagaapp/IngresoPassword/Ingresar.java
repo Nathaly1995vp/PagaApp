@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.pagaapp.MainActivity;
 import com.example.pagaapp.R;
 
 public class Ingresar extends AppCompatActivity {
-Button ingreso1, olvideClave, soporte;
+Button ingreso1, olvideClave;
+ImageButton soporte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ Button ingreso1, olvideClave, soporte;
         getSupportActionBar().hide();
 
 
-        soporte = (Button)findViewById(R.id.soporte);
+        soporte = (ImageButton) findViewById(R.id.soporte);
         soporte.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Ingresar.this, Soporte.class);
